@@ -1,0 +1,49 @@
+{
+  "name": "px-datetime-common",
+  "version": "0.8.2",
+  "main": [
+    "px-datetime-common.html"
+  ],
+  "ignore": [
+    "*.enc",
+    "**/.*",
+    "scripts",
+    "*.md",
+    "*.png",
+    "npm-debug.log",
+    "gulpfile.js",
+    "sass",
+    ".github",
+    "bower_components",
+    "node_modules",
+    "test"
+  ],
+  "dependencies": {
+    "px-moment-imports": "^0.0.1",
+    "polymer": "^1.6.1",
+    "px-theme": "^2.0.1",
+    "iron-a11y-keys-behavior": "PolymerElements/iron-a11y-keys-behavior#~1.1.0",
+    "px-dropdown": "^3.1.0",
+    "px-polymer-font-awesome": "^1.0.0",
+    "app-localize-behavior": "^1.0.2"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#~v1.1.0",
+    "px-starter-kit-design": "^0.7.0",
+    "px-buttons-design": "^1.1.0",
+    "px-forms-design": "^1.1.0",
+    "px-list-bare-design": "^0.3.0",
+    "px-tables-design": "^1.1.0",
+    "px-actionable-text-icons-design": "^1.1.0"
+  },
+  "homepage": "https://github.com/PredixDev/px-datetime-common",
+  "_release": "0.8.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.8.2",
+    "commit": "7da4258ab1b53c64c396595feb5d1322db5f8355"
+  },
+  "_source": "https://github.com/PredixDev/px-datetime-common.git",
+  "_target": "^0.8.0",
+  "_originalSource": "px-datetime-common"
+}

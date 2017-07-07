@@ -1,0 +1,140 @@
+<!-- Common imports -->
+<link rel="import" href="../../polymer/polymer.html" />
+<link rel="import" href="../../px-polymer-font-awesome/px-polymer-font-awesome.html" />
+
+<!-- Common demo imports -->
+<link rel="import" href="../../px-demo/px-demo-header.html" />
+<link rel="import" href="../../px-demo/px-demo-api-viewer.html" />
+<link rel="import" href="../../px-demo/px-demo-footer.html" />
+<link rel="import" href="../../px-demo/px-demo-configs.html" />
+<link rel="import" href="../../px-demo/px-demo-props.html" />
+<link rel="import" href="../../px-demo/px-demo-interactive.html" />
+<link rel="import" href="../../px-demo/px-demo-component-snippet.html" />
+
+<!-- Imports for this componnent -->
+<link rel="import" href="../../px-demo/css/px-demo-styles.html" />
+<link rel="import" href="../px-modal.html" />
+
+<!-- Demo DOM module -->
+<dom-module id="local-element-demo">
+  <template>
+    <style include="px-demo-styles" is="custom-style"></style>
+
+    <!-- Header -->
+    <px-demo-header
+        module-name="px-modal"
+        description="Modals are useful when a user needs to leave the normal application flow to focus on a specific message or workflow. The modal is a somewhat contentious UI element – sometimes there is no way around it, but generally speaking, using modals frequently or stacking modals on modals should be avoided.">
+    </px-demo-header>
+
+    <!-- Interactive -->
+    <px-demo-interactive>
+      <!-- Configs -->
+      <px-demo-configs configs="[[configs]]" props="{{props}}" chosen-config="{{chosenConfig}}"></px-demo-configs>
+
+      <!-- Props -->
+      <px-demo-props props="{{props}}" config="[[chosenConfig]]"></px-demo-props>
+
+      <!-- Component ---------------------------------------------------------->
+      <px-demo-component>
+        <div>
+          <px-modal
+              btn-modal-positive="{{props.btnModalPositive.value}}"
+              btn-modal-positive-disabled="{{props.btnModalPositiveDisabled.value}}"
+              btn-modal-negative="{{props.btnModalNegative.value}}"
+              modal-heading="{{props.modalHeading.value}}"
+              scrolling-disabled="{{props.scrollingDisabled.value}}">
+              <button class='btn btn--primary modal-trigger'>Open Modal</button>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </px-modal>
+        </div>
+      </px-demo-component>
+      <!-- END Component ------------------------------------------------------>
+
+      <px-demo-component-snippet
+          element-properties="{{props}}"
+          element-name="px-modal">
+      </px-demo-component-snippet>
+    </px-demo-interactive>
+
+    <!-- API Viewer -->
+    <px-demo-api-viewer source="px-modal"></px-demo-api-viewer>
+
+    <!-- Footer -->
+    <px-demo-footer></px-demo-footer>
+
+  </template>
+
+</dom-module>
+<script>
+  Polymer({
+    is: 'local-element-demo',
+
+    properties: {
+
+      props: {
+        type: Object,
+        value: function(){ return this.demoProps; }
+      },
+
+      configs: {
+        type: Array,
+        value: function(){
+          return [
+            { configName: "Option 1",
+              btnModalPositive: "",
+              btnModalNegative: "Cancel",
+              modalHeading: "",
+              btnModalPositiveDisabled: false,
+              scrollingDisabled: false },
+
+            { configName: "Option 2",
+              btnModalPositive: "OK",
+              btnModalNegative: "Cancel",
+              modalHeading: "Magna Adipiscing",
+              btnModalPositiveDisabled: true,
+              scrollingDisabled: true }
+          ]
+        }
+      }
+    },
+
+    demoProps: {
+      btnModalPositive: {
+        type: String,
+        defaultValue: '',
+        inputType: 'text'
+      },
+
+      btnModalNegative: {
+        type: String,
+        defaultValue: 'Cancel',
+        inputType: 'text'
+      },
+
+      modalHeading: {
+        type: String,
+        defaultValue: '',
+        inputType: 'text'
+      },
+
+      btnModalPositiveDisabled: {
+        type: Boolean,
+        defaultValue: false,
+        inputType: 'toggle'
+      },
+
+      scrollingDisabled: {
+        type: Boolean,
+        defaultValue: false,
+        inputType: 'toggle'
+      },
+
+      lightDomContent: {
+        type: String,
+        defaultValue: "<button class='btn btn--primary modal-trigger'>Open Modal</button><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+      }
+
+    }
+
+  });
+</script>

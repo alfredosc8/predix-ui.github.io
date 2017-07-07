@@ -1,0 +1,45 @@
+{
+  "name": "px-d3-imports",
+  "version": "1.0.5",
+  "main": [
+    "px-d3-imports.html"
+  ],
+  "ignore": [
+    "*.enc",
+    ".*",
+    "npm-debug.log",
+    "gulpfile.js",
+    "sass",
+    "bower_components",
+    "node_modules",
+    "test",
+    "OSS_Notice.pdf",
+    "scripts",
+    ".github",
+    "px-d3-imports.png",
+    "LICENSE.md",
+    "CONTRIBUTING.md",
+    "HISTORY.md",
+    "README.md",
+    ".jshintrc",
+    ".editorconfig"
+  ],
+  "dependencies": {
+    "pxd3": "d3#^4.7.0",
+    "polymer": "^1.9.0",
+    "iron-ajax": "^2.0.0"
+  },
+  "devDependencies": {
+    "d3": "^3.0.0"
+  },
+  "homepage": "https://github.com/PredixDev/px-d3-imports",
+  "_release": "1.0.5",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.5",
+    "commit": "db54bec3fe0e3ccb2c3b356f856bb54eab17d0c8"
+  },
+  "_source": "https://github.com/PredixDev/px-d3-imports.git",
+  "_target": "^1.0.1",
+  "_originalSource": "px-d3-imports"
+}
